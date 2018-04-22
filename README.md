@@ -32,7 +32,7 @@ First, create your `.vue` file anywhere in the `src` folder.
 
 Second, run the webpack compiler and point the `--env.file` argument to the .vue file you created (you don't need to add the extension)
 ``` bash
-$ webpack --env.file=test
+$ webpack --env.file=path/to/my-component
 ```
 
 The webpack compiler runs in watch mode so any changes you make will update the compiled file.  The compiled file will be created at the same relative path in the `dist` folder.  So if you create a component at `src/my-component/my-rad-component.vue`, the compiled file will be located in `dist/my-component/my-rad-component.js`. You can now do what you want with the compiled JS file.
