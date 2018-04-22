@@ -74,7 +74,7 @@ You can then include the component on your page using the `name` property you se
 You can try it using the sample component we included in the `src` folder...
 
 ## IMPORTANT!!!
-git 
+
 * Make sure you give your component a `name` property. It will be used as the tagname for your component
 
 ## Other Notes
