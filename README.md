@@ -53,20 +53,20 @@ You can then include the component on your page using the `name` property you se
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>VueJS Component Test</title>
-  <script src="https://unpkg.com/vue"></script>
-  <script src="my-component.js"></script>
+    <meta charset="UTF-8">
+    <title>VueJS Component Test</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="my-component.js"></script>
 </head>
 <body>
-  <div id="wrapper">
-    <my-component></my-component>
-  </div>
-  <script>
-  var app = new Vue({
-    el : '#wrapper'
-  });
-  </script>
+    <div id="wrapper">
+      <my-component></my-component>
+    </div>
+    <script>
+    var app = new Vue({
+      el : '#wrapper'
+    });
+    </script>
 </body>
 </html>
 ```
