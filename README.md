@@ -56,7 +56,7 @@ You can then include the component on your page using the `name` property you se
 	<meta charset="UTF-8">
 	<title>VueJS Component Test</title>
 	<script src="https://unpkg.com/vue"></script>
-	<script src="dist/my-component.js"></script>
+	<script src="my-component.js"></script>
 </head>
 <body>
 	<div id="wrapper">
