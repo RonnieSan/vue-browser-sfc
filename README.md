@@ -10,7 +10,9 @@ The compiler is setup to allow you to use either LESS or SASS (scss or sass) if 
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
-### Create a new Vue project
+### 1. Create a new Vue project
+
+At the command line, enter the following commands in parent folder of where you will be keeping your project.
 
 ``` bash
 # Install vue-cli if you haven't already
@@ -26,22 +28,25 @@ $ cd my-project
 $ npm install
 ```
 
-### Create and compile component
+### 2. Create and compile a component
 
-First, create your `.vue` file anywhere in the `src` folder.
+Create a `.vue` file anywhere in the `src` folder of the project you just created.
 
-Second, run the webpack compiler and point the `--env.file` argument to the .vue file you created (you don't need to add the extension)
+Then, run the webpack compiler and point the `--env.file` argument to the .vue file you created (you don't need to add the extension). The path should be relative to the `src` folder, so if you created your `.vue` file in the `src` folder, the path would just be the name of the file.  For example, ff the file is located in `src/sub-folder/my-component.vue`, the path you would enter for the `--env.file` argument would be `sub-folder/my-component`.
+
 ``` bash
 $ webpack --env.file=path/to/my-component
 ```
 
-The webpack compiler runs in watch mode so any changes you make will update the compiled file.  The compiled file will be created at the same relative path in the `dist` folder.  So if you create a component at `src/my-component/my-rad-component.vue`, the compiled file will be located in `dist/my-component/my-rad-component.js`. You can now do what you want with the compiled JS file.
+The webpack compiler runs in watch mode so any changes you make will update the compiled file. Whenever you make changes to you component, as long as the webpack compiler is running, the changes will be re-compiled and saved over the same output file. The compiled output file will be created at the same relative path in the `dist` folder that it was located in the `src` folder. So if you create a component at `src/some-sub-folder/my-rad-component.vue`, the compiled file will be located in `dist/some-sub-folder/my-rad-component.js`.
+
+Once you've completed the development of your component and want to use it, you can take the compiled `.js` file and place it wherever you want
 
 Make sure you add a `name` property to the script section of the component. This is what will be used as the tag for your component when you use it in your app/HTML file.
 
 Giving your component a name property of `my-component` means you will add your component to the app as `<my-component></my-component>`.
 
-### Use the compiled JS file
+### 3. Use the compiled JS file
 
 You will still need to include VueJS on your HTML page and create a root VueJS app in order to use your component.
 
@@ -71,7 +76,7 @@ You can then include the component on your page using the `name` property you se
 </html>
 ```
 
-You can try it using the sample component we included in the `src` folder...
+The template package includes a sample component (`my-component.vue`) that you can test it all out with. The command you would use to compile it would be `webpack --env.file=example`.
 
 ## IMPORTANT!!!
 
