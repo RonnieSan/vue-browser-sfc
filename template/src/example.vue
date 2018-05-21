@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name : 'my-component',
+	name : 'example',
 	data() {
 		return {
 			name : 'world'
