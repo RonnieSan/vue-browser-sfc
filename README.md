@@ -79,6 +79,8 @@ You can then include the component on your page using the `name` property you se
 ## Included Example
 The template package includes a sample component (`my-component.vue`) that you can test it all out with. The command you would use to compile it would be `webpack --env.file=example`. The component has a name property of `example`, the the tagname you would use in your HTML woudl be `<example></example>`.
 
+The example component will print out the words "Hello, world."  When the text is clicked, the word "world" will change to "foobar".
+
 ## Converting an existing Vue Single File Component to a standalone JS file
 To convert an existing Vue Single File Component to a standalone JS file, simple add it to the `src` folder along with all the required dependencies (make sure all the paths are correct for the dependencies).  Then run the compiler (`webpack` command) with the `--env.file` argument pointing to the component. If anything goes wrong, the compiler will tell you what errors occured.
 
