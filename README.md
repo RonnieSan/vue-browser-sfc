@@ -40,7 +40,7 @@ $ webpack --env.file=path/to/my-component
 
 The webpack compiler runs in watch mode so any changes you make will update the compiled file. Whenever you make changes to you component, as long as the webpack compiler is running, the changes will be re-compiled and saved over the same output file. The compiled output file will be created at the same relative path in the `dist` folder that it was located in the `src` folder. So if you create a component at `src/some-sub-folder/my-rad-component.vue`, the compiled file will be located in `dist/some-sub-folder/my-rad-component.js`.
 
-Once you've completed the development of your component and want to use it, you can take the compiled `.js` file and place it wherever you want
+Once you've completed the development of your component and want to use it, you can take the compiled `.js` file and place it wherever you want.
 
 Make sure you add a `name` property to the script section of the component. This is what will be used as the tag for your component when you use it in your app/HTML file.
 
@@ -86,7 +86,7 @@ To convert an existing Vue Single File Component to a standalone JS file, simple
 
 ## IMPORTANT!!!
 
-* Make sure you give your component a `name` property. It will be used as the tagname for your component
+* Make sure you give your component a `name` property. It will be used as the tagname for your component.
 
 ## Other Notes
 
