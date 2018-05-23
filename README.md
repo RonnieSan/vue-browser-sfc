@@ -19,7 +19,7 @@ At the command line, enter the following commands in parent folder of where you 
 $ npm install -g vue-cli
 
 # Create a new project based on this template
-$ vue init ronniesan/browser-component my-project
+$ vue init ronniesan/vue-browser-sfc my-project
 
 # Navigate into your new project folder
 $ cd my-project
