@@ -1,8 +1,8 @@
-# Vue Browser Component
+# Vue Browser SFC
 
 > Template for build setup to compile Single File Components (.vue) into a standalone JS file for use in the browser
 
-This template is useful for compiling VueJS single file components into standalone JS files for use in the browser. This is useful for devs that want to create a simple component that can be used on a site without having to build an entire app around it, similar to the way a JQuery plugin might be used. The template, script, and styles are all compiled to a single JS file.
+This template is useful for compiling VueJS single file components (SFC) into standalone JS files for use in the browser. This is useful for devs that want to create a simple component that can be used on a site without having to build an entire app around it, similar to the way a JQuery plugin might be used. The template, script, and styles are all compiled to a single JS file.
 
 The compiler is setup to allow you to use either LESS or SASS (scss or sass) if you want to.
 
