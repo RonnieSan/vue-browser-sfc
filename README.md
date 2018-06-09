@@ -77,7 +77,7 @@ You can then include the component on your page using the `name` property you se
 ```
 
 ## Included Example
-The template package includes a sample component (`my-component.vue`) that you can test it all out with. The command you would use to compile it would be `webpack --env.file=example`. The component has a name property of `example`, the the tagname you would use in your HTML woudl be `<example></example>`.
+The template package includes a sample component (`example.vue`) that you can test it all out with. The command you would use to compile it would be `webpack --env.file=example`. The component has a name property of `example`, the the tagname you would use in your HTML woudl be `<example></example>`.
 
 The example component will print out the words "Hello, world."  When the text is clicked, the word "world" will change to "foobar".
 
