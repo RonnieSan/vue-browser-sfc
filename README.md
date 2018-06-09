@@ -32,7 +32,7 @@ $ npm install
 
 Create a `.vue` file anywhere in the `src` folder of the project you just created.
 
-Then, run the webpack compiler and point the `--env.file` argument to the .vue file you created (you don't need to add the extension). The path should be relative to the `src` folder, so if you created your `.vue` file in the `src` folder, the path would just be the name of the file.  For example, ff the file is located in `src/sub-folder/my-component.vue`, the path you would enter for the `--env.file` argument would be `sub-folder/my-component`.
+Then, run the webpack compiler and point the `--env.file` argument to the .vue file you created (you don't need to add the extension). The path should be relative to the `src` folder, so if you created your `.vue` file in the `src` folder, the path would just be the name of the file.  For example, if the file is located in `src/sub-folder/my-component.vue`, the path you would enter for the `--env.file` argument would be `sub-folder/my-component`.
 
 ``` bash
 $ webpack --env.file=path/to/my-component
