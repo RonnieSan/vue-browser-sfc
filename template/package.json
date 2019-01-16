@@ -54,15 +54,13 @@
       [
         "@babel/preset-env",
         {
-          "useBuiltIns": "entry"
+          "useBuiltIns": "usage"
         }
       ]
     ]
   },
   "browserslist": [
     "last 2 versions",
-    "> 0.5%",
-    "ie >= 11",
-    "not dead"
+    "ie >= 11"
   ]
 }
