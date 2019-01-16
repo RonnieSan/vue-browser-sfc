@@ -35,7 +35,7 @@ module.exports = (env) => {
 		resolve : {
 			extensions : ['.vue', '.js'],
 			alias : {
-				'vue$' : resolve('node_modules/vue/dist/vue.esm.js'),
+				'vue$' : resolve('node_modules/vue/dist/vue.min.js'),
 				'@'    : resolve('src')
 			}
 		},
