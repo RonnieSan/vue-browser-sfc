@@ -10,7 +10,8 @@ const path                = require('path');
 const webpack             = require('webpack');
 const ExtractTextPlugin   = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin   = require('optimize-css-assets-webpack-plugin');
-const StringReplacePlugin = require("string-replace-webpack-plugin");
+const StringReplacePlugin = require('string-replace-webpack-plugin');
+const VueLoaderPlugin     = require('vue-loader/lib/plugin');
 
 function resolve(dir) {
 	return path.resolve(__dirname, dir);
@@ -58,56 +59,59 @@ module.exports = (env) => {
 				},
 				{
 					test : /\.vue$/,
-					loader : 'vue-loader',
-					options : {
-						loaders : ExtractTextPlugin.extract({
-							use : {
-								css : [
-									'vue-style-loader',
-									'css-loader'
-								],
-								postcss : [
-									'vue-style-loader',
-									'css-loader'
-								],
-								less : [
-									'vue-style-loader',
-									'css-loader',
-									{
-										loader : 'less-loader',
-										options : {
-											paths : [
-												path.resolve(__dirname, 'src/less')
-											],
-											sourceMap : true
-										}
-									}
-								],
-								scss : [
-									'vue-style-loader',
-									'css-loader',
-									'sass-loader'
-								],
-								sass : [
-									'vue-style-loader',
-									'css-loader',
-									'sass-loader?indentedSyntax'
-								]
-							},
-							fallback: 'vue-style-loader'
-						})
-					}
+					loader : 'vue-loader'
 				},
 				{
 					test : /\.js$/,
 					loader : 'babel-loader',
 					include : [
 						resolve('src')
+					],
+					exclude: file => (
+						/node_modules/.test(file) &&
+						!/\.vue\.js/.test(file)
+					)
+				},
+				{
+					test : /\.css$/,
+					use : [
+						'vue-style-loader',
+						'css-loader'
+					]
+				},
+				{
+					test : /\.less$/,
+					use : [
+						'vue-style-loader',
+						'css-loader',
+						'less-loader'
+					]
+				},
+				{
+					test : /\.scss$/,
+					use : [
+						'vue-style-loader',
+						'css-loader',
+						'sass-loader'
+					]
+				},
+				{
+					test : /\.sass$/,
+					use : [
+						'vue-style-loader',
+						'css-loader',
+						{
+							loader : 'sass-loader',
+							options : {
+								indentedSyntax : true
+							}
+						}
 					]
 				}
 			]
 		},
 		plugins : [
+			new VueLoaderPlugin(),
 			new OptimizeCSSPlugin({
 				cssProcessorOptions: {
 					safe: true
