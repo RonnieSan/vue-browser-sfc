@@ -34,7 +34,7 @@
     "friendly-errors-webpack-plugin": "^1.7.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "string-replace-webpack-plugin": "^0.1.3",
